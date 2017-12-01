@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tech firms Voice support form Dreamers"
+        android:textSize="17sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+    <TextView
+        android:id="@+id/news_author"
+        android:layout_below="@id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author: kobe bryant"/>
+    <TextView
+        android:id="@+id/news_date"
+        android:layout_below="@id/news_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date: Thu,02 Nov 2017 09:44:02 PDT"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+</RelativeLayout>

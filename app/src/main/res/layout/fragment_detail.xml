@@ -1,0 +1,159 @@
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    tools:context="com.example.ziwei.stocksearch.DetailActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp">
+
+        <TextView
+            android:layout_width="109dp"
+            android:layout_height="77dp"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Stock Details"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_facebook"
+            android:padding="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:scaleType="centerCrop"
+            android:scaleX="0.6"
+            android:scaleY="0.5"
+            android:background="@drawable/facebook" />
+
+        <ImageButton
+            android:id="@+id/btn_star"
+            android:padding="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/empty"
+            android:scaleX="0.7"
+            android:scaleY="0.6"
+            android:scaleType="centerCrop"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/listview_container"
+        android:layout_below="@id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+        <ListView
+            android:id="@+id/detail_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ListView>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:indeterminateTint="@android:color/darker_gray"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:id="@+id/alert_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Failed to load data."
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/webView_indicators_header"
+        android:layout_below="@id/listview_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Indicators"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinner_indicator"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/indicators"
+            android:layout_weight="1.5"/>
+        <TextView
+            android:id="@+id/btn_indicator_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="Change"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/webView_indicators_header"
+        >
+        <WebView
+            android:id="@+id/webView_indicators"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+
+        <ProgressBar
+            android:id="@+id/progressBar_indicator_webView"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:indeterminateTint="@android:color/darker_gray"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:id="@+id/alert_text_indicator_webView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Failed to load data."
+            android:textSize="20sp"
+            android:textColor="@android:color/black"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+</ScrollView>

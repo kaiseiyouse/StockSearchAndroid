@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ziwei.stocksearch.DetailActivity">
+
+    <item
+        android:id="@+id/menu_item_favlist_header"
+        android:orderInCategory="100"
+        android:title="Remove from Favorites?"
+        app:showAsAction="ifRoom|withText"
+        android:visible="true"
+        android:enabled="false"
+        />
+    <item
+        android:id="@+id/menu_item_favlist_no"
+        android:orderInCategory="100"
+        android:title="No"
+        app:showAsAction="ifRoom|withText"
+        android:visible="true"/>
+    <item
+        android:id="@+id/menu_item_favlist_yes"
+        android:orderInCategory="100"
+        android:title="Yes"
+        app:showAsAction="ifRoom|withText"
+        android:visible="true"/>
+</menu>
